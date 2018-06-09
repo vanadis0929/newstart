@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./index.css";
 import CommonBar from "./components/CommonBar/presenter";
 import CommonMenu from "./components/CommonMenu/presenter";
 import UserSearch from "./components/UserSearch/presenter";
@@ -9,23 +9,30 @@ import ChatList from "./components/ChatList/presenter";
 import MyPage from "./components/MyPage/presenter";
 import MyMenuList from "./components/MyMenuList/presenter";
 
+import Layout from "./styles/Layout";
+import Header from "./styles/Header";
+import Contents from "./styles/Contents";
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
+      <Layout>
+        <Header>
           <CommonBar />
           <CommonMenu />
-        </header>
-        <article>
+        </Header>
+
+        <Contents>
           <UserSearch />
           <UserList />
+
           <ChatSearch />
           <ChatList />
+
           <MyPage />
           <MyMenuList />
-        </article>
-      </div>
+        </Contents>
+      </Layout>
     );
   }
 }

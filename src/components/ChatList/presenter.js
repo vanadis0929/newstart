@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 //stateless
-const ChatListWrap = styled.ul`
-  padding: 0 10px;
+const ChatListWrap = styled.ul `
+  padding: 0 15px;
   & li {
     display: flex;
     align-items: center;
@@ -21,7 +21,7 @@ const ChatListWrap = styled.ul`
   }
 `;
 
-const ChatThum = styled.div`
+const ChatThum = styled.div `
   border-radius: 100px;
   flex: 0 0 50px;
   height: 50px;
@@ -33,7 +33,7 @@ const ChatThum = styled.div`
   }
 `;
 
-const ChatTitle = styled.dt`
+const ChatTitle = styled.dt `
   font-size: 18px;
   font-weight: 700;
   color: #999;
@@ -48,13 +48,13 @@ const ChatTitle = styled.dt`
   }
 `;
 
-const ChatMember = styled.em`
+const ChatMember = styled.em `
   font-size: 12px;
   color: #222;
   vertical-align: middle;
 `;
 
-const ChatContext = styled.dd`
+const ChatContext = styled.dd `
   font-size: 13px;
   color: #222;
   margin-top: 10px;
@@ -63,7 +63,7 @@ const ChatContext = styled.dd`
   text-overflow: ellipsis;
 `;
 
-const ChatTime = styled.span`
+const ChatTime = styled.span `
   font-size: 12px;
   color: #000;
   position: absolute;
@@ -72,61 +72,94 @@ const ChatTime = styled.span`
 `;
 
 const ChatList = props => {
-  return (
-    <ChatListWrap>
-      <li>
-        <ChatThum>
-          <img src={require("../../images/profile.jpg")} alt="" />
-        </ChatThum>
-        <dl>
-          <ChatTitle>
-            <span> 채팅방 이름입니다 </span>
-            <ChatMember>50</ChatMember>
-          </ChatTitle>
-          <ChatContext> 채팅내용이 여기에 </ChatContext>
-        </dl>
-        <ChatTime> 오후 10: 10 </ChatTime>
-      </li>
-      <li>
-        <ChatThum>
-          <img src={require("../../images/profile.jpg")} alt="" />
-        </ChatThum>
-        <dl>
-          <ChatTitle>
-            <span> 채팅방 이름입니다 </span>
-            <ChatMember>50</ChatMember>
-          </ChatTitle>
-          <ChatContext> 채팅내용이 여기에 </ChatContext>
-        </dl>
-        <ChatTime> 오후 10: 10 </ChatTime>
-      </li>
-      <li>
-        <ChatThum>
-          <img src={require("../../images/profile.jpg")} alt="" />
-        </ChatThum>
-        <dl>
-          <ChatTitle>
-            <span> 채팅방 이름입니다 </span>
-            <ChatMember>50</ChatMember>
-          </ChatTitle>
-          <ChatContext> 채팅내용이 여기에 </ChatContext>
-        </dl>
-        <ChatTime> 오후 10: 10 </ChatTime>
-      </li>
-      <li>
-        <ChatThum>
-          <img src={require("../../images/profile.jpg")} alt="" />
-        </ChatThum>
-        <dl>
-          <ChatTitle>
-            <span> 채팅방 이름입니다 </span>
-            <ChatMember>50</ChatMember>
-          </ChatTitle>
-          <ChatContext> 채팅내용이 여기에 </ChatContext>
-        </dl>
-        <ChatTime> 오후 10: 10 </ChatTime>
-      </li>
-    </ChatListWrap>
+  return ( <
+    ChatListWrap >
+    <
+    li >
+    <
+    ChatThum >
+    <
+    img src = {
+      require("../../images/profile.jpg")
+    }
+    alt = "" / >
+    <
+    /ChatThum> <
+    dl >
+    <
+    ChatTitle >
+    <
+    span > 채팅방 이름입니다 < /span> <
+    ChatMember > 50 < /ChatMember> <
+    /ChatTitle> <
+    ChatContext > 채팅내용이 여기에 < /ChatContext> <
+    /dl> <
+    ChatTime > 오후 10: 10 < /ChatTime> <
+    /li> <
+    li >
+    <
+    ChatThum >
+    <
+    img src = {
+      require("../../images/profile.jpg")
+    }
+    alt = "" / >
+    <
+    /ChatThum> <
+    dl >
+    <
+    ChatTitle >
+    <
+    span > 채팅방 이름입니다 < /span> <
+    ChatMember > 50 < /ChatMember> <
+    /ChatTitle> <
+    ChatContext > 채팅내용이 여기에 < /ChatContext> <
+    /dl> <
+    ChatTime > 오후 10: 10 < /ChatTime> <
+    /li> <
+    li >
+    <
+    ChatThum >
+    <
+    img src = {
+      require("../../images/profile.jpg")
+    }
+    alt = "" / >
+    <
+    /ChatThum> <
+    dl >
+    <
+    ChatTitle >
+    <
+    span > 채팅방 이름입니다 < /span> <
+    ChatMember > 50 < /ChatMember> <
+    /ChatTitle> <
+    ChatContext > 채팅내용이 여기에 < /ChatContext> <
+    /dl> <
+    ChatTime > 오후 10: 10 < /ChatTime> <
+    /li> <
+    li >
+    <
+    ChatThum >
+    <
+    img src = {
+      require("../../images/profile.jpg")
+    }
+    alt = "" / >
+    <
+    /ChatThum> <
+    dl >
+    <
+    ChatTitle >
+    <
+    span > 채팅방 이름입니다 < /span> <
+    ChatMember > 50 < /ChatMember> <
+    /ChatTitle> <
+    ChatContext > 채팅내용이 여기에 < /ChatContext> <
+    /dl> <
+    ChatTime > 오후 10: 10 < /ChatTime> <
+    /li> <
+    /ChatListWrap>
   );
 };
 
