@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-const Layout = styled.div`
+import CommonBar from "../components/CommonBar/presenter";
+import CommonMenu from "../components/CommonMenu/presenter";
+
+const Container = styled.header `
   position: fixed;
   left: 0;
   top: 0;
@@ -10,8 +13,12 @@ const Layout = styled.div`
 `;
 
 const HeaderStyle = props => {
-  const { children } = props;
-  return <Layout>{children}</Layout>;
+  return (
+    <Container>
+      <CommonBar />
+      <CommonMenu />
+    </Container>
+  );
 };
 
 export default HeaderStyle;
