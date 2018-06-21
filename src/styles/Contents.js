@@ -19,7 +19,7 @@ const Contents = styled.article`
 `;
 
 const ContentsStyle = props => {
-  //const children = props.children; 와 동일
+  //const { children } = props.children; 와 동일
 
   return (
     <Contents>
