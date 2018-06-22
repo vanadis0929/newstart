@@ -11,9 +11,6 @@ import ChatList from "../components/ChatList/presenter";
 import MyPage from "../components/MyPage/presenter";
 import MyMenuList from "../components/MyMenuList/presenter";
 
-import LoginForm from "./../components/LoginForm/presenter";
-import JoinForm from "./../components/JoinForm/presenter";
-
 const Contents = styled.article`
   padding-top: 88px;
 `;
@@ -32,9 +29,6 @@ const ContentsStyle = props => {
 
       <MyPage />
       <MyMenuList /> */}
-
-      <LoginForm />
-      <JoinForm />
     </Contents>
   );
 };

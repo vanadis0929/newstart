@@ -1,42 +1,38 @@
 import React from "react";
 import styled from "styled-components";
 import InputStyle from "./../../styles/Input";
-import LogoImage from "../../images/logo.png";
 
 //stateless
-const LoginFormWrap = styled.div`
-  background-color: #ffeb33;
+const LoginFormWrap = styled.form`
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: column;
-  height: calc(100vh - 88px);
-  height: -webkit-calc(100vh - 88px);
-
-  & form {
+  flex-flow: inherit;
+  width: 70%;
+  & > div {
     display: flex;
-    flex-flow: inherit;
-    width: 70%;
-    & fleldset {
-      margin-bottom: 10px;
-      & input {
-        width: 100%;
-        height: 30px;
-        font-size: 12px;
-        padding: 0 10px;
-        box-sizing: border-box;
-        border: 0 none;
-        margin-bottom: 5px;
-      }
-      &::last-child {
-        margin-bottom: 0;
+    align-items: center;
+    justify-content: space-between;
+    & > * {
+      flex: 1;
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
       }
     }
   }
-`;
-
-const Logo = styled.div`
-  margin-bottom: 30px;
+  & fleldset {
+    margin-bottom: 10px;
+    & input {
+      width: 100%;
+      height: 30px;
+      font-size: 12px;
+      padding: 0 10px;
+      box-sizing: border-box;
+      border: 0 none;
+      margin-bottom: 5px;
+    }
+    &::last-child {
+      margin-bottom: 0;
+    }
 `;
 
 const LoginButton = styled.button.attrs({
@@ -54,24 +50,19 @@ const LoginButton = styled.button.attrs({
   font-weight: 700;
 `;
 
-const LoginForm = props => {
+const JoinForm = props => {
   return (
     <LoginFormWrap>
-      <Logo>
-        <img src={LogoImage} alt="" />
-      </Logo>
-      <form>
-        <fleldset>
-          <input type="email" placeholder="이메일 아이디 입력" />
-          <input type="password" placeholder="비밀번호" />
-        </fleldset>
+      <fleldset>
+        <input type="email" placeholder="이메일 아이디 입력" />
+        <input type="password" placeholder="비밀번호" />
+      </fleldset>
 
-        {/* <InputStyle type="text" /> */}
+      {/* <InputStyle type="text" /> */}
 
-        <LoginButton>로그인</LoginButton>
-      </form>
+      <LoginButton>로그인</LoginButton>
     </LoginFormWrap>
   );
 };
 
-export default LoginForm;
+export default JoinForm;

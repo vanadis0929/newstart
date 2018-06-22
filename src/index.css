@@ -41,3 +41,8 @@ dfn {
     font-style: normal;
     font-weight: 700;
 }
+
+fieldset,
+img {
+    border: 0 none;
+}
