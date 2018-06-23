@@ -11,6 +11,7 @@ body {
 
 a {
     color: inherit;
+    text-decoration: none;
 }
 
 button {
@@ -45,4 +46,13 @@ dfn {
 fieldset,
 img {
     border: 0 none;
+}
+
+@keyframes hue {
+    from {
+        -webkit-filter: hue-rotate(0deg);
+    }
+    to {
+        -webkit-filter: hue-rotate(-360deg);
+    }
 }

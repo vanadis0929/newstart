@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import LoginForm from "./presenter";
-import Container from "./index";
+import App from "./presenter";
 
 class Container extends Component {
   render() {
-    return <LoginForm />;
+    return <App />;
   }
 }
 

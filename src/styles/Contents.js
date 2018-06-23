@@ -20,15 +20,15 @@ const ContentsStyle = props => {
 
   return (
     <Contents>
+      {" "}
       {/* <UserSearch />
-      <UserList /> */}
-
-      {/* <ChatView /> */}
+            <UserList /> */}
+      {/* <ChatView /> */}{" "}
       {/* <ChatSearch />
-      <ChatList />
+            <ChatList />
 
-      <MyPage />
-      <MyMenuList /> */}
+            <MyPage />
+            <MyMenuList /> */}{" "}
     </Contents>
   );
 };

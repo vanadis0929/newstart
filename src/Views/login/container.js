@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import CommonBar from "./presenter";
+import LoginForm from "./presenter";
 
 class Container extends Component {
   render() {
-    return <CommonBar />;
+    return <LoginForm />;
   }
 }
 
