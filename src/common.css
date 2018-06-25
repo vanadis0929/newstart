@@ -21,6 +21,11 @@ button {
     color: inherit;
 }
 
+*:focus,
+*:active {
+    outline: none;
+}
+
 header {
     color: #fff;
 }

@@ -10,14 +10,15 @@ const Input = styled.input`
   border: 0 none;
 `;
 
-// ${props => (props.type === "email" ? `background: #012300;`};
-// ${props => (props.type === "email" ? `background: #012300;`};
-// ${props => (props.type === "email" ? `background: #012300;`};
-// ${props => (props.type === "email" ? `background: #012300;`};
-// ${props => (props.type === "email" ? `background: #012300;`};
+// ${props => props.type === "email" ? `background: #012300;`};
 
 const InputStyle = props => {
+  props.type === "search" ? `background: #012300;`;
+  if (props.type === "search") {
+    `opacity: 0.5`;
+  }
   console.log(props.type);
+
   return <Input type={props.type} placeholder={props.placeholder} />;
 };
 

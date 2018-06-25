@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+import { Link } from "react-router-dom";
+import Ionicon from "react-ionicons";
+
 //stateless
 const CommonMenuDiv = styled.div`
   display: flex;
@@ -10,7 +13,8 @@ const CommonMenuDiv = styled.div`
   padding-bottom: 10px;
   background-color: #423630;
   & div:first-child {
-    & button {
+    & a,
+    button {
       font-size: 3vw;
       margin-right: 15px;
       &:hover {
@@ -19,7 +23,8 @@ const CommonMenuDiv = styled.div`
     }
   }
   & div:last-child {
-    & button {
+    & a,
+    button {
       font-size: 2.8vw;
       margin-right: 15px;
       &:last-child {
@@ -33,14 +38,32 @@ const CommonMenu = props => {
   return (
     <CommonMenuDiv>
       <div>
-        <button type="button"> 친구목록 </button>{" "}
-        <button type="button"> 채팅목록 </button>{" "}
-        <button type="button"> 내정보 </button>{" "}
-      </div>{" "}
+        <Link to="/user">
+          <Ionicon icon="ios-man" fontSize="30px" color="rgba(255,255,255,1)" />
+        </Link>
+        <Link to="/chat">
+          <Ionicon
+            icon="md-chatbubbles"
+            fontSize="30px"
+            color="rgba(255,255,255,0.5)"
+          />
+        </Link>
+        <Link to="/mypage">
+          <Ionicon
+            icon="md-menu"
+            fontSize="30px"
+            color="rgba(255,255,255,0.5)"
+          />
+        </Link>
+      </div>
       <div>
-        <button type="button"> 알림켜기 / 끄기 </button>{" "}
-        <button type="button"> 메뉴 </button>{" "}
-      </div>{" "}
+        <button type="button">
+          <Ionicon icon="md-alarm" fontSize="30px" color="#fff" />
+        </button>
+        <button type="button">
+          <Ionicon icon="md-apps" fontSize="30px" color="#fff" />
+        </button>
+      </div>
     </CommonMenuDiv>
   );
 };

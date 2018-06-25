@@ -1,36 +1,30 @@
 import React from "react";
 import styled from "styled-components";
 
-import UserSearch from "../components/UserSearch/presenter";
-import UserList from "../components/UserList/presenter";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
-import ChatSearch from "../components/ChatSearch/presenter";
-import ChatList from "../components/ChatList/presenter";
-//import ChatView from "../Views/Chatview";
-
-import MyPage from "../components/MyPage/presenter";
-import MyMenuList from "../components/MyMenuList/presenter";
+import UserListForm from "Views/user";
+import ChatListForm from "Views/chat";
+import MyPageForm from "Views/mypage";
 
 const Contents = styled.article`
-  padding-top: 88px;
+  padding-top: 103px;
 `;
 
 const ContentsStyle = props => {
-  //const { children } = props.children; 와 동일
+  //const { children } = props; //와 동일
 
   return (
     <Contents>
-      {" "}
-      {/* <UserSearch />
-            <UserList /> */}
-      {/* <ChatView /> */}{" "}
-      {/* <ChatSearch />
-            <ChatList />
-
-            <MyPage />
-            <MyMenuList /> */}{" "}
+      <Switch>
+        <Route exact path="/user" component={UserListForm} />
+        <Route exact path="/chat" component={ChatListForm} />
+        <Route exact path="/mypage" component={MyPageForm} />
+      </Switch>
     </Contents>
   );
 };
+
+//BrowserRouter 를 감싸니까 컴포넌트가 안바뀜 ??
 
 export default ContentsStyle;
