@@ -53,6 +53,12 @@ img {
     border: 0 none;
 }
 
+.ButtonWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 @keyframes hue {
     from {
         -webkit-filter: hue-rotate(0deg);

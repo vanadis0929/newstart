@@ -11,7 +11,6 @@ const CommonMenuDiv = styled.div`
   align-items: center;
   padding: 0 20px;
   padding-bottom: 10px;
-  background-color: #423630;
   & div:first-child {
     & a,
     button {

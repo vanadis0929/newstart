@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 import LogoImage from "images/logo.png";
-// import InputStyle from "./../../styles/Input";
+
+import InputStyle from "styles/Input";
+import ButtonStyle from "styles/Button";
 
 //stateless
 const IntroWrap = styled.div`
@@ -28,7 +30,7 @@ const JoinFormWrap = styled.form`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    & > * {
+    & > a {
       background-color: #fff;
       font-size: 13px;
       text-align: center;
@@ -46,20 +48,15 @@ const JoinFormWrap = styled.form`
       }
     }
   }
+
   & fieldset {
     margin-bottom: 10px;
-    & input {
-      width: 100%;
-      height: 30px;
-      font-size: 12px;
-      padding: 0 10px;
-      box-sizing: border-box;
-      border: 0 none;
-      margin-bottom: 5px;
-    }
-    &::last-child {
-      margin-bottom: 0;
-    }
+  }
+  & input {
+    margin-bottom: 5px;
+  }
+  &::last-child {
+    margin-bottom: 0;
   }
 `;
 
@@ -71,13 +68,13 @@ const JoinForm = props => {
       </Logo>
       <JoinFormWrap>
         <fieldset>
-          <input type="email" placeholder="이메일 (아이디) 입력" />
-          <input type="test" placeholder="닉네임" />
-          <input type="password" placeholder="비밀번호" />
-          <input type="password" placeholder="비밀번호 재확인" />
+          <InputStyle type="email" placeholder="이메일 (아이디) 입력" />
+          <InputStyle type="text" placeholder="닉네임" />
+          <InputStyle type="password" placeholder="비밀번호" />
+          <InputStyle type="password" placeholder="비밀번호 재확인" />
         </fieldset>
         <div>
-          <button type="button">회원가입</button>
+          <ButtonStyle type="button">회원가입</ButtonStyle>
           <Link to="/login">취소</Link>
         </div>
       </JoinFormWrap>

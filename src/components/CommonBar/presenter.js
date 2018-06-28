@@ -9,7 +9,6 @@ const CommonArea = styled.div`
   color: #fff;
   justify-content: space-between;
   align-items: center;
-  background-color: #423630;
 
   & div {
     & button {

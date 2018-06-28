@@ -5,6 +5,7 @@ import styled from "styled-components";
 import LogoImage from "images/logo.png";
 
 import InputStyle from "styles/Input";
+import ButtonStyle from "styles/Button";
 
 //stateless
 const IntroWrap = styled.div`
@@ -29,19 +30,19 @@ const LoginFormWrap = styled.form`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    & > * {
+    & > a {
       background-color: #fff;
-      font-size: 13px;
+      font-size: 4.5vw;
       text-align: center;
       border: 1px solid #ddd;
       border-radius: 5px;
       height: 40px;
       font-weight: 700;
       flex: 1;
+      margin-right: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-right: 10px;
       &:last-child {
         margin-right: 0;
       }
@@ -52,12 +53,6 @@ const LoginFormWrap = styled.form`
     margin-bottom: 10px;
   }
   & input {
-    width: 100%;
-    height: 30px;
-    font-size: 12px;
-    padding: 0 10px;
-    box-sizing: border-box;
-    border: 0 none;
     margin-bottom: 5px;
   }
   &::last-child {
@@ -77,7 +72,7 @@ const LoginForm = props => {
           <InputStyle type="password" placeholder="비밀번호" />
         </fieldset>
         <div>
-          <button type="button">로그인</button>
+          <ButtonStyle type="button">로그인</ButtonStyle>
           <Link to="/join">회원가입하기</Link>
         </div>
       </LoginFormWrap>
