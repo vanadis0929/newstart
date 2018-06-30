@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import CommonBar from "../components/CommonBar/presenter";
-import CommonMenu from "../components/CommonMenu/presenter";
+import CommonBar from "../components/CommonBar/";
+import CommonMenu from "../components/CommonMenu/";
 
 const Container = styled.header`
   position: fixed;

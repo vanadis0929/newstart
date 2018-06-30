@@ -37,17 +37,17 @@ const CommonMenu = props => {
   return (
     <CommonMenuDiv>
       <div>
-        <Link to="/user">
+        <Link to="/user" onClick={props.actionToggle}>
           <Ionicon icon="ios-man" fontSize="30px" color="rgba(255,255,255,1)" />
         </Link>
-        <Link to="/chat">
+        <Link to="/chat" onClick={props.actionToggle}>
           <Ionicon
             icon="md-chatbubbles"
             fontSize="30px"
             color="rgba(255,255,255,0.5)"
           />
         </Link>
-        <Link to="/mypage">
+        <Link to="/mypage" onClick={props.actionToggle}>
           <Ionicon
             icon="md-menu"
             fontSize="30px"

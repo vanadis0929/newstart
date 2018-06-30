@@ -1,7 +1,7 @@
 import React from "react";
 
-import ChatSearch from "components/ChatSearch/presenter";
-import ChatList from "components/ChatList/presenter";
+import ChatSearch from "components/ChatSearch/";
+import ChatList from "components/ChatList/";
 
 const ChatListView = props => {
   return (

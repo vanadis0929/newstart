@@ -11,12 +11,12 @@ import LoginForm from "Views/login";
 const App = props => {
   return (
     <BrowserRouter>
-      {/* <Switch>
-        <Route exact path="/login" component={LoginForm} />
-        <Route exact path="/join" component={JoinForm} />
-      </Switch> */}
-
       <Layout>
+        <Switch>
+          <Route exact path="/login" component={LoginForm} />
+          <Route exact path="/join" component={JoinForm} />
+        </Switch>
+
         <Contents />
       </Layout>
     </BrowserRouter>

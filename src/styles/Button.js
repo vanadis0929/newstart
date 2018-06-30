@@ -28,7 +28,10 @@ const ButtonStyle = styled.button`
 const Button = props => {
   const { children } = props;
   return (
-    <ButtonStyle type="button" style={props.style}>
+    <ButtonStyle
+      type={props.type === "button" ? "button" : props.type}
+      style={props.style}
+    >
       {children}
     </ButtonStyle>
   );

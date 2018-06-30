@@ -1,7 +1,7 @@
 import React from "react";
 
-import MyPage from "components/MyPage/presenter";
-import MyMenuList from "components/MyMenuList/presenter";
+import MyPage from "components/MyPage/";
+import MyMenuList from "components/MyMenuList/";
 
 const MyPageView = props => {
   return (

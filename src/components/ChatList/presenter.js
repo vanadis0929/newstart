@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import ChatRoom from "components/ChatRoom";
+
 //stateless
 const ChatListWrap = styled.ul`
   padding: 0 15px;
@@ -74,62 +76,69 @@ const ChatTime = styled.span`
 `;
 
 const ChatList = props => {
+  console.log(props);
   return (
-    <ChatListWrap>
-      <li>
-        <ChatThum>
-          <img src={require("../../images/profile.jpg")} alt="" />
-        </ChatThum>{" "}
-        <dl>
-          <ChatTitle>
-            <span> 채팅방 이름입니다 </span> <ChatMember> 50 </ChatMember>{" "}
-          </ChatTitle>{" "}
-          <ChatContext> 채팅내용이 여기에 </ChatContext>{" "}
-        </dl>{" "}
-        <ChatTime> 오후 10: 10 </ChatTime>{" "}
-      </li>{" "}
-      <li>
-        <ChatThum>
-          <img src={require("../../images/profile.jpg")} alt="" />
-        </ChatThum>{" "}
-        <dl>
-          <ChatTitle>
-            <span> 채팅방 이름입니다 </span> <ChatMember> 50 </ChatMember>{" "}
-          </ChatTitle>{" "}
-          <ChatContext> 채팅내용이 여기에 </ChatContext>{" "}
-        </dl>{" "}
-        <ChatTime> 오후 10: 10 </ChatTime>{" "}
-      </li>{" "}
-      <li>
-        <ChatThum>
-          <img src={require("../../images/profile.jpg")} alt="" />
-        </ChatThum>{" "}
-        <dl>
-          <ChatTitle>
-            <span> 채팅방 이름입니다 </span> <ChatMember> 50 </ChatMember>{" "}
-          </ChatTitle>{" "}
-          <ChatContext> 채팅내용이 여기에 </ChatContext>{" "}
-        </dl>{" "}
-        <ChatTime> 오후 10: 10 </ChatTime>{" "}
-      </li>{" "}
-      <li>
-        <ChatThum>
-          <img src={require("../../images/profile.jpg")} alt="" />
-        </ChatThum>{" "}
-        <dl>
-          <ChatTitle>
-            <span> 채팅방 이름입니다 </span> <ChatMember> 50 </ChatMember>{" "}
-          </ChatTitle>{" "}
-          <ChatContext>
-            {" "}
-            채팅내용이 여기에 채팅내용이 여기에 채팅내용이 여기에 채팅내용이
-            여기에 채팅내용이 여기에 채팅내용이 여기 채팅내용이 여기에
-            채팅내용이 여기에 채팅내용이 여기{" "}
-          </ChatContext>{" "}
-        </dl>{" "}
-        <ChatTime> 오후 10: 10 </ChatTime>{" "}
-      </li>{" "}
-    </ChatListWrap>
+    <React.Fragment>
+      <ChatListWrap>
+        <li onClick={props.handleChatActive}>
+          <ChatThum>
+            <img src={require("../../images/profile.jpg")} alt="" />
+          </ChatThum>{" "}
+          <dl>
+            <ChatTitle>
+              <span> 채팅방 이름입니다 </span> <ChatMember> 50 </ChatMember>{" "}
+            </ChatTitle>{" "}
+            <ChatContext> 채팅내용이 여기에 </ChatContext>{" "}
+          </dl>{" "}
+          <ChatTime> 오후 10: 10 </ChatTime>{" "}
+        </li>{" "}
+        <li>
+          <ChatThum>
+            <img src={require("../../images/profile.jpg")} alt="" />
+          </ChatThum>{" "}
+          <dl>
+            <ChatTitle>
+              <span> 채팅방 이름입니다 </span> <ChatMember> 50 </ChatMember>{" "}
+            </ChatTitle>{" "}
+            <ChatContext> 채팅내용이 여기에 </ChatContext>{" "}
+          </dl>{" "}
+          <ChatTime> 오후 10: 10 </ChatTime>{" "}
+        </li>{" "}
+        <li>
+          <ChatThum>
+            <img src={require("../../images/profile.jpg")} alt="" />
+          </ChatThum>{" "}
+          <dl>
+            <ChatTitle>
+              <span> 채팅방 이름입니다 </span> <ChatMember> 50 </ChatMember>{" "}
+            </ChatTitle>{" "}
+            <ChatContext> 채팅내용이 여기에 </ChatContext>{" "}
+          </dl>{" "}
+          <ChatTime> 오후 10: 10 </ChatTime>{" "}
+        </li>{" "}
+        <li>
+          <ChatThum>
+            <img src={require("../../images/profile.jpg")} alt="" />
+          </ChatThum>{" "}
+          <dl>
+            <ChatTitle>
+              <span> 채팅방 이름입니다 </span> <ChatMember> 50 </ChatMember>{" "}
+            </ChatTitle>{" "}
+            <ChatContext>
+              {" "}
+              채팅내용이 여기에 채팅내용이 여기에 채팅내용이 여기에 채팅내용이
+              여기에 채팅내용이 여기에 채팅내용이 여기 채팅내용이 여기에
+              채팅내용이 여기에 채팅내용이 여기{" "}
+            </ChatContext>{" "}
+          </dl>{" "}
+          <ChatTime> 오후 10: 10 </ChatTime>{" "}
+        </li>{" "}
+      </ChatListWrap>
+
+      {props.chatActive ? (
+        <ChatRoom handleChatDeactive={props.handleChatDeactive} />
+      ) : null}
+    </React.Fragment>
   );
 };
 
