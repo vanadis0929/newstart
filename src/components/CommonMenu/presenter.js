@@ -37,23 +37,51 @@ const CommonMenu = props => {
   return (
     <CommonMenuDiv>
       <div>
-        <Link to="/user" onClick={props.actionToggle}>
-          <Ionicon icon="ios-man" fontSize="30px" color="rgba(255,255,255,1)" />
-        </Link>
-        <Link to="/chat" onClick={props.actionToggle}>
-          <Ionicon
-            icon="md-chatbubbles"
-            fontSize="30px"
-            color="rgba(255,255,255,0.5)"
-          />
-        </Link>
-        <Link to="/mypage" onClick={props.actionToggle}>
-          <Ionicon
-            icon="md-menu"
-            fontSize="30px"
-            color="rgba(255,255,255,0.5)"
-          />
-        </Link>
+        <button type="button" data-idx="user" onClick={props.statusToggle}>
+          {props.status === "user" ? (
+            <Ionicon
+              icon="ios-man"
+              fontSize="30px"
+              color="rgba(255,255,255,1)"
+            />
+          ) : (
+            <Ionicon
+              icon="ios-man"
+              fontSize="30px"
+              color="rgba(255,255,255,0.5)"
+            />
+          )}
+        </button>
+        <button type="button" data-idx="chat" onClick={props.statusToggle}>
+          {props.status === "chat" ? (
+            <Ionicon
+              icon="md-chatbubbles"
+              fontSize="30px"
+              color="rgba(255,255,255,1)"
+            />
+          ) : (
+            <Ionicon
+              icon="md-chatbubbles"
+              fontSize="30px"
+              color="rgba(255,255,255,0.5)"
+            />
+          )}
+        </button>
+        <button type="button" data-idx="mypage" onClick={props.statusToggle}>
+          {props.status === "mypage" ? (
+            <Ionicon
+              icon="md-menu"
+              fontSize="30px"
+              color="rgba(255,255,255,1)"
+            />
+          ) : (
+            <Ionicon
+              icon="md-menu"
+              fontSize="30px"
+              color="rgba(255,255,255,0.5)"
+            />
+          )}
+        </button>
       </div>
       <div>
         <button type="button">

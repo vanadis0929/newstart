@@ -13,14 +13,16 @@ const Contents = styled.article`
 
 const ContentsStyle = props => {
   //const { children } = props; //와 동일
-
+  console.log("ffff: " + this.props);
   return (
     <Contents>
-      <Switch>
+      {/* <Switch>
         <Route exact path="/user" component={UserListForm} />
         <Route exact path="/chat" component={ChatListForm} />
         <Route exact path="/mypage" component={MyPageForm} />
-      </Switch>
+      </Switch> */}
+
+      {props.status === "user" ? <UserListForm /> : null}
     </Contents>
   );
 };

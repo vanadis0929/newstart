@@ -5,33 +5,23 @@ import PropTypes from "prop-types";
 
 class Container extends Component {
   state = {
-    action: "user"
+    status: "user"
   };
 
   render() {
-    const { action } = this.state;
-    console.log(this.state);
-    return <CommonMenu action={action} actionToggle={this._actionToggle} />;
+    const { status } = this.state;
+    //console.log(this.state);
+    return <CommonMenu status={status} statusToggle={this._statusToggle} />;
   }
 
-  _actionToggle = action => {
-    console.log("fffffffffffffffff");
-    this.setState(prevState => {
-      const { action } = prevState;
-      if (action === "user") {
-        return {
-          action: "user"
-        };
-      } else if (action === "chat") {
-        return {
-          action: "chat"
-        };
-      } else if (action === "mypage") {
-        return {
-          action: "mypage"
-        };
-      }
+  _statusToggle = event => {
+    var Attr = event.currentTarget.dataset.idx; //button 태그의 data-idx 를 가져옴
+
+    this.setState({
+      status: Attr
     });
+    console.log("Attr: " + Attr);
+    console.log(this.state.status);
   };
 }
 
