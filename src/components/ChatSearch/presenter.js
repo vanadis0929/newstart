@@ -8,9 +8,10 @@ const ChatSearchDiv = styled.form`
   margin-bottom: 20px;
   position: sticky;
   left: 0;
-  top: 88px;
+  top: 0;
   z-index: 5;
   border-bottom: 1px solid #d1d1d1;
+  background-color: #fff;
 `;
 
 const ChatInput = props => {

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import InputStyle from "styles/Input";
+import Ionicon from "react-ionicons";
 
 import Textarea from "react-textarea-autosize";
 
@@ -31,11 +32,22 @@ const ChatInfoArea = styled.div`
   background-color: rgba(2, 150, 146, 0.9);
   display: flex;
   align-items: center;
-  padding: 0 24px;
+  padding: 0 10px;
   box-sizing: border-box;
   font-size: 20px;
   font-weight: 700;
   color: #fff;
+  & button {
+    margin-right: 15px;
+  }
+  & h1 {
+    font-size: 20px;
+    font-weight: 400;
+    flex: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 `;
 
 const ChatMsgArea = styled.div`
@@ -47,30 +59,53 @@ const ChatMsgArea = styled.div`
 
 const YourChat = styled.dl`
   font-size: 14px;
-  padding: 0 10px;
+  padding: 0 10px 0 60px;
   margin-bottom: 5px;
   line-height: 1.4;
   position: relative;
+  display: flex;
+  flex-direction: column;
   & > dt {
     font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    & strong {
+      margin-bottom: 5px;
+      display: block;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
   }
   & > dd {
+    &:last-child {
+      margin-top: 5px;
+    }
     & > span {
       border-radius: 10px;
       border: 2px solid #000;
       padding: 10px;
       background-color: #fff;
       display: inline-block;
+      color: #000;
+      font-size: 12px;
+      word-break: keep-all;
+      word-wrap: break-word;
     }
   }
 `;
 
 const YourProfile = styled.div`
-  border-radius: 10px;
   width: 40px;
   height: 40px;
+  position: absolute;
+  left: 10px;
+  top: 0;
+  border-radius: 100px;
   & img {
     width: 100%;
+    border-radius: inherit;
   }
 `;
 
@@ -88,6 +123,7 @@ const MyChat = styled.div`
       padding: 10px;
       background-color: #fff5b0;
       display: inline-block;
+      color: #000;
     }
   }
 `;
@@ -98,10 +134,11 @@ const ChatTime = styled.time`
 `;
 
 const ChatInputBox = styled.div`
-  flex: 0 0 46px;
+  min-height: 46px
   display: flex;
   background-color: #fff;
   border-top: 1px solid #000;
+  align-items: center;
   & textarea {
     max-height: 96px;
     height: 100%;
@@ -120,9 +157,9 @@ const ChatRoom = props => {
     <ChatRoomDiv>
       <ChatInfoArea>
         <button type="button" onClick={props.handleChatDeactive}>
-          뒤로
-        </button>{" "}
-        채팅방 이름
+          <Ionicon icon="md-arrow-back" fontSize="35px" color="#fff" />
+        </button>
+        <h1>대화방 이름</h1>
       </ChatInfoArea>
       <ChatMsgArea>
         <MyChat>
@@ -153,12 +190,14 @@ const ChatRoom = props => {
             <YourProfile>
               <img src={require("../../images/profile.jpg")} alt="" />
             </YourProfile>
-            당신의 닉네임
+            <strong>당신의 닉네임</strong>
           </dt>
           <dd>
             <span>당신이 쓴 채팅 내용</span>
           </dd>
-          <ChatTime>오전 10:11</ChatTime>
+          <dd>
+            <ChatTime>오전 10:11</ChatTime>
+          </dd>
         </YourChat>
       </ChatMsgArea>
       <ChatInputBox>
