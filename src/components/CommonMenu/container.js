@@ -8,6 +8,8 @@ class Container extends Component {
     status: "user"
   };
 
+  componentWillMount = () => {};
+
   render() {
     const { status } = this.state;
     return <CommonMenu status={status} statusToggle={this._statusToggle} />;

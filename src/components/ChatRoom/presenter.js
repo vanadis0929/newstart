@@ -134,7 +134,7 @@ const ChatTime = styled.time`
 `;
 
 const ChatInputBox = styled.div`
-  min-height: 46px
+  min-height: 46px;
   display: flex;
   background-color: #fff;
   border-top: 1px solid #000;

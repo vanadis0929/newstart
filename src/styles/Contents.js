@@ -7,6 +7,11 @@ import UserListForm from "Views/user";
 import ChatListForm from "Views/chat";
 import MyPageForm from "Views/mypage";
 
+import UserSearch from "components/UserSearch/";
+import UserList from "components/UserList/";
+import ChatSearch from "components/ChatSearch/";
+import ChatList from "components/ChatList/";
+
 const Contents = styled.article`
   padding-top: 103px;
 `;
