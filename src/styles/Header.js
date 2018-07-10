@@ -15,10 +15,11 @@ const Container = styled.header`
 `;
 
 const HeaderStyle = props => {
+  console.log("header:: " + props.status);
   return (
     <Container>
       <CommonBar />
-      <CommonMenu />
+      <CommonMenu inheritStatus={props.status} />
     </Container>
   );
 };

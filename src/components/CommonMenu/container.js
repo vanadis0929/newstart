@@ -8,10 +8,15 @@ class Container extends Component {
     status: "user"
   };
 
+  componentWillMount = () => {};
+
   render() {
     const { status } = this.state;
+    console.log(this.props.inheritStatus);
     //console.log(this.state);
-    return <CommonMenu status={status} statusToggle={this._statusToggle} />;
+    return (
+      <CommonMenu inheritStatus={status} statusToggle={this._statusToggle} />
+    );
   }
 
   _statusToggle = event => {
@@ -20,8 +25,9 @@ class Container extends Component {
     this.setState({
       status: Attr
     });
-    console.log("Attr: " + Attr);
-    console.log(this.state.status);
+    //console.log("Attr: " + Attr);
+    //console.log(this.props);
+    console.log(this.props.inheritStatus);
   };
 }
 

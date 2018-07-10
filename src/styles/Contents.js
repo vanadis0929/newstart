@@ -7,13 +7,18 @@ import UserListForm from "Views/user";
 import ChatListForm from "Views/chat";
 import MyPageForm from "Views/mypage";
 
+import UserSearch from "components/UserSearch/";
+import UserList from "components/UserList/";
+import ChatSearch from "components/ChatSearch/";
+import ChatList from "components/ChatList/";
+
 const Contents = styled.article`
   padding-top: 103px;
 `;
 
 const ContentsStyle = props => {
   //const { children } = props; //와 동일
-  console.log("ffff: " + this.props);
+  console.log("ffff: " + props.inheritStatus);
   return (
     <Contents>
       {/* <Switch>
@@ -22,7 +27,18 @@ const ContentsStyle = props => {
         <Route exact path="/mypage" component={MyPageForm} />
       </Switch> */}
 
-      {props.status === "user" ? <UserListForm /> : null}
+      {props.inheritStatus === "user" ? (
+        <React.Fragment>
+          <UserSearch />
+          <UserList />
+        </React.Fragment>
+      ) : null}
+      {props.inheritStatus === "chat" ? (
+        <React.Fragment>
+          <ChatSearch />
+          <ChatList />
+        </React.Fragment>
+      ) : null}
     </Contents>
   );
 };

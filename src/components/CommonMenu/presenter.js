@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Ionicon from "react-ionicons";
 
+import UserListForm from "Views/user";
+
 //stateless
 const CommonMenuDiv = styled.div`
   display: flex;
@@ -38,7 +40,7 @@ const CommonMenu = props => {
     <CommonMenuDiv>
       <div>
         <button type="button" data-idx="user" onClick={props.statusToggle}>
-          {props.status === "user" ? (
+          {props.inheritStatus === "user" ? (
             <Ionicon
               icon="ios-man"
               fontSize="30px"
@@ -53,7 +55,7 @@ const CommonMenu = props => {
           )}
         </button>
         <button type="button" data-idx="chat" onClick={props.statusToggle}>
-          {props.status === "chat" ? (
+          {props.inheritStatus === "chat" ? (
             <Ionicon
               icon="md-chatbubbles"
               fontSize="30px"
@@ -68,7 +70,7 @@ const CommonMenu = props => {
           )}
         </button>
         <button type="button" data-idx="mypage" onClick={props.statusToggle}>
-          {props.status === "mypage" ? (
+          {props.inheritStatus === "mypage" ? (
             <Ionicon
               icon="md-menu"
               fontSize="30px"
