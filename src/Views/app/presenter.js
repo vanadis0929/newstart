@@ -10,9 +10,7 @@ const App = props => {
   return (
     <BrowserRouter>
       <React.Fragment>
-        {props.isLogged ? <Layout /> : null}
-
-        <Auth />
+        {props.isLogged === false ? <Auth /> : <Layout />}
       </React.Fragment>
     </BrowserRouter>
   );
