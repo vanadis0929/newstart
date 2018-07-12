@@ -36,6 +36,7 @@ const ChatInfoArea = styled.div`
   box-sizing: border-box;
   font-size: 20px;
   font-weight: 700;
+  z-index: 20;
   color: #fff;
   & button {
     margin-right: 15px;
@@ -55,6 +56,8 @@ const ChatMsgArea = styled.div`
   display: flex;
   flex-direction: column-reverse;
   margin-bottom: 20px;
+  overflow-y: auto;
+  margin-top: 70px;
 `;
 
 const YourChat = styled.dl`
@@ -124,6 +127,7 @@ const MyChat = styled.div`
       background-color: #fff5b0;
       display: inline-block;
       color: #000;
+      font-size: 12px;
     }
   }
 `;

@@ -75,7 +75,10 @@ const JoinForm = props => {
         </fieldset>
         <div>
           <ButtonStyle type="button">회원가입</ButtonStyle>
-          <Link to="/login">취소</Link>
+          <a href="#none" onclick={props.gotoJoin}>
+            취소
+          </a>
+          {/* <Link to="/login">취소</Link> */}
         </div>
       </JoinFormWrap>
     </IntroWrap>

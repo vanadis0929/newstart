@@ -3,7 +3,7 @@ import JoinForm from "./presenter";
 
 class Container extends Component {
   render() {
-    return <JoinForm />;
+    return <JoinForm {...this.props} {...this.state} />;
   }
 }
 

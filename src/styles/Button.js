@@ -9,7 +9,7 @@ const ButtonWrap = styled.div`
 
 const ButtonStyle = styled.button`
   background-color: #fff;
-  font-size: 4.5vw;
+  font-size: 14px;
   text-align: center;
   border: 1px solid #ddd;
   border-radius: 5px;

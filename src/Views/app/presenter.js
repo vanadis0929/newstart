@@ -3,22 +3,18 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import Layout from "styles/Layout";
 
-import JoinForm from "Views/join";
-import LoginForm from "Views/login";
+import Auth from "components/Auth";
 
 //layout.js에서 header를 불러오기때문에 여기서는 불러오지 않음.
 const App = props => {
   return (
-    // <BrowserRouter>
-    <React.Fragment>
-      {/* <Switch>
-          <Route exact path="/login" component={LoginForm} />
-          <Route exact path="/join" component={JoinForm} />
-        </Switch> */}
+    <BrowserRouter>
+      <React.Fragment>
+        {props.isLogged ? <Layout /> : null}
 
-      <Layout {...props} />
-    </React.Fragment>
-    //</BrowserRouter>
+        <Auth />
+      </React.Fragment>
+    </BrowserRouter>
   );
 };
 

@@ -32,7 +32,7 @@ const LoginFormWrap = styled.form`
     justify-content: space-between;
     & > a {
       background-color: #fff;
-      font-size: 4.5vw;
+      font-size: 14px;
       text-align: center;
       border: 1px solid #ddd;
       border-radius: 5px;
@@ -73,7 +73,13 @@ const LoginForm = props => {
         </fieldset>
         <div>
           <ButtonStyle type="button">로그인</ButtonStyle>
-          <Link to="/join">회원가입하기</Link>
+          {/* <ButtonStyle type="button" onClick={props.gotoJoin}>
+            회원가입
+          </ButtonStyle> */}
+          <a href="#none" onClick={props.gotoJoin}>
+            회원가입
+          </a>
+          {/* <Link to="/join">회원가입하기</Link> */}
         </div>
       </LoginFormWrap>
     </IntroWrap>

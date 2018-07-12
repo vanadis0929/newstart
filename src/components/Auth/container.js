@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import LoginForm from "./presenter";
+import Auth from "./presenter";
 
 class Container extends Component {
   state = {
@@ -8,8 +8,7 @@ class Container extends Component {
 
   render() {
     const { mode } = this.state;
-
-    return <LoginForm mode={mode} gotoJoin={this._gotoJoin} />;
+    return <Auth mode={mode} gotoJoin={this._gotoJoin} />;
   }
 
   _gotoJoin = () => {
