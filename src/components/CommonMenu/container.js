@@ -4,31 +4,17 @@ import CommonMenu from "./presenter";
 import PropTypes from "prop-types";
 
 class Container extends Component {
-  state = {
-    status: "user"
-  };
-
-  componentWillMount = () => {};
-
   render() {
-    const { status } = this.state;
-    console.log(this.props.inheritStatus);
-    //console.log(this.state);
+    console.log(this.props);
     return (
-      <CommonMenu inheritStatus={status} statusToggle={this._statusToggle} />
+      <CommonMenu
+        status={this.props.status}
+        statusToggle={this.props.statusToggle}
+      />
     );
   }
-
-  _statusToggle = event => {
-    var Attr = event.currentTarget.dataset.idx; //button 태그의 data-idx 를 가져옴
-
-    this.setState({
-      status: Attr
-    });
-    //console.log("Attr: " + Attr);
-    //console.log(this.props);
-    console.log(this.props.inheritStatus);
-  };
 }
+
+//stateful 방식에서는 this.props 식으로 불러와야한다.
 
 export default Container;

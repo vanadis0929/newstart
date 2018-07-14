@@ -9,14 +9,14 @@ const Layout = styled.div`
 `;
 
 const LayoutStyle = props => {
-  const { children } = props;
+  //const { children } = props;
   //const children = props.children; 와 동일
-  console.log("layout::" + props.status);
+  console.log(props);
   return (
     //로그인 후에 나오는 부분
 
     <Layout>
-      <Header status={props.status} />
+      <Header {...props} />
       <Contents status={props.status} />
     </Layout>
   );

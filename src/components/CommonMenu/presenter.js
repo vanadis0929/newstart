@@ -36,11 +36,12 @@ const CommonMenuDiv = styled.div`
 `;
 
 const CommonMenu = props => {
+  console.log(props);
   return (
     <CommonMenuDiv>
       <div>
         <button type="button" data-idx="user" onClick={props.statusToggle}>
-          {props.inheritStatus === "user" ? (
+          {props.status === "user" ? (
             <Ionicon
               icon="ios-man"
               fontSize="30px"
@@ -55,7 +56,7 @@ const CommonMenu = props => {
           )}
         </button>
         <button type="button" data-idx="chat" onClick={props.statusToggle}>
-          {props.inheritStatus === "chat" ? (
+          {props.status === "chat" ? (
             <Ionicon
               icon="md-chatbubbles"
               fontSize="30px"
@@ -70,7 +71,7 @@ const CommonMenu = props => {
           )}
         </button>
         <button type="button" data-idx="mypage" onClick={props.statusToggle}>
-          {props.inheritStatus === "mypage" ? (
+          {props.status === "mypage" ? (
             <Ionicon
               icon="md-menu"
               fontSize="30px"
