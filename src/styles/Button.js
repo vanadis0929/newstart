@@ -25,6 +25,8 @@ const ButtonStyle = styled.button`
   }
 `;
 
+const Anchor = ButtonStyle.withComponent("a");
+
 const Button = props => {
   const { children } = props;
   return (

@@ -30,23 +30,6 @@ const JoinFormWrap = styled.form`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    & > a {
-      background-color: #fff;
-      font-size: 13px;
-      text-align: center;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      height: 40px;
-      font-weight: 700;
-      flex: 1;
-      margin-right: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      &:last-child {
-        margin-right: 0;
-      }
-    }
   }
 
   & fieldset {
@@ -75,9 +58,9 @@ const JoinForm = props => {
         </fieldset>
         <div>
           <ButtonStyle type="button">회원가입</ButtonStyle>
-          <a href="#none" onclick={props.gotoJoin}>
+          <Anchor href="#none" onclick={props.gotoJoin}>
             취소
-          </a>
+          </Anchor>
           {/* <Link to="/login">취소</Link> */}
         </div>
       </JoinFormWrap>

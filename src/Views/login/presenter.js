@@ -30,23 +30,6 @@ const LoginFormWrap = styled.form`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    & > a {
-      background-color: #fff;
-      font-size: 14px;
-      text-align: center;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      height: 40px;
-      font-weight: 700;
-      flex: 1;
-      margin-right: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      &:last-child {
-        margin-right: 0;
-      }
-    }
   }
 
   & fieldset {
@@ -76,9 +59,9 @@ const LoginForm = props => {
           {/* <ButtonStyle type="button" onClick={props.gotoJoin}>
             회원가입
           </ButtonStyle> */}
-          <a href="#none" onClick={props.gotoJoin}>
+          <Anchor href="#none" onClick={props.gotoJoin}>
             회원가입
-          </a>
+          </Anchor>
           {/* <Link to="/join">회원가입하기</Link> */}
         </div>
       </LoginFormWrap>
