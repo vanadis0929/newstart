@@ -4,20 +4,16 @@ import App from "./presenter";
 class Container extends Component {
   state = {
     isLogged: false,
-    status: "user"
+    status: "user",
+    mode: "login"
   };
 
   render() {
     const { status } = this.state.status;
     const { isLogged } = this.state.isLogged;
+    const { mode } = this.state.mode;
     console.log(this.state);
-    return (
-      <App
-        isLogged={this.state.isLogged}
-        status={this.state.status}
-        statusToggle={this._statusToggle}
-      />
-    );
+    return <App isLogged={this.state.isLogged} status={this.state.status} mode={this.state.mode} statusToggle={this._statusToggle} modeToggle={this._modeToggle} handleLogin={this._handleLogin} handleLogout={this._handleLogout} />;
   }
 
   _statusToggle = event => {
@@ -30,6 +26,29 @@ class Container extends Component {
     //console.log("Attr: " + Attr);
     //console.log(this.props);
     console.log(this.state);
+  };
+
+  _handleLogin = () => {
+    this.setState({
+      isLogged: true
+    });
+  };
+
+  _handleLogout = () => {
+    this.setState({
+      isLogged: false
+    });
+  };
+
+  _modeToggle = () => {
+    this.setState(prevState => {
+      const { mode } = prevState;
+      if (mode === "login") {
+        return { mode: "join" };
+      } else if (mode === "join") {
+        return { mode: "login" };
+      }
+    });
   };
 }
 

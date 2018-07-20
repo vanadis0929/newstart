@@ -18,7 +18,7 @@ const HeaderStyle = props => {
   console.log(props);
   return (
     <Container>
-      <CommonBar />
+      <CommonBar {...props} />
       <CommonMenu {...props} />
     </Container>
   );

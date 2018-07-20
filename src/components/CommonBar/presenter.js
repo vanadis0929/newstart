@@ -29,7 +29,7 @@ const Header = props => {
         <button type="button">
           <Ionicon icon="ios-remove" fontSize="25px" color="#fff" />
         </button>
-        <button type="button">
+        <button type="button" onClick={props.handleLogout}>
           <Ionicon icon="md-close" fontSize="25px" color="#fff" />
         </button>
       </div>

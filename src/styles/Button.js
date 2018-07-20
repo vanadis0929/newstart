@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
+const _clickTest = () => {
+  console.log("ddddddddd");
+};
+
 const ButtonWrap = styled.div`
   display: flex;
   align-items: center;
@@ -25,12 +29,17 @@ const ButtonStyle = styled.button`
   }
 `;
 
+const Anchor = ButtonStyle.withComponent("a").extend`
+  text-decoration: none; 
+`;
+
 const Button = props => {
   const { children } = props;
   return (
     <ButtonStyle
       type={props.type === "button" ? "button" : props.type}
       style={props.style}
+      onClick={props._clickTest}
     >
       {children}
     </ButtonStyle>

@@ -3,7 +3,7 @@ import CommonBar from "./presenter";
 
 class Container extends Component {
   render() {
-    return <CommonBar />;
+    return <CommonBar {...this.props} {...this.state} />;
   }
 }
 

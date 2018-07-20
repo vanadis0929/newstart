@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import JoinForm from "./presenter";
+import Auth from "./presenter";
 
 class Container extends Component {
   render() {
-    return <JoinForm />;
+    console.log(this.props);
+    return <Auth {...this.props} {...this.state} />;
   }
 }
 
