@@ -38,5 +38,5 @@ const Button = props => {
   return <ButtonStyle {...props}>{children}</ButtonStyle>;
 };
 
-export { Anchor };
+export { Anchor }; //anchor을 사용하기위해서 export 시킴 (필수)
 export default Button;
