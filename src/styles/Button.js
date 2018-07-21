@@ -35,15 +35,9 @@ const Anchor = ButtonStyle.withComponent("a").extend`
 
 const Button = props => {
   const { children } = props;
-  return (
-    <ButtonStyle
-      type={props.type === "button" ? "button" : props.type}
-      style={props.style}
-      onClick={props._clickTest}
-    >
-      {children}
-    </ButtonStyle>
-  );
+  return <ButtonStyle {...props}>{children}</ButtonStyle>;
 };
+
+export { Anchor };
 
 export default Button;

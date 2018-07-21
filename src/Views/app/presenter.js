@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, { Fragment } from "react";
 import styled, { injectGlobal } from "styled-components";
 
 //import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
@@ -79,9 +78,9 @@ img {
 const App = props => {
   console.log(this.props);
   return (
-    <React.Fragment>
+    <Fragment>
       {props.isLogged === false ? <Auth {...props} /> : <Layout {...props} />}
-    </React.Fragment>
+    </Fragment>
   );
 };
 

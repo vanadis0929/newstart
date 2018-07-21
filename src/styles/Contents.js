@@ -41,6 +41,7 @@ const ContentsStyle = props => {
           <MyMenuList />
         </React.Fragment>
       ) : null}
+      {props.children}
     </Contents>
   );
 };

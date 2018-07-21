@@ -13,7 +13,17 @@ class Container extends Component {
     const { isLogged } = this.state.isLogged;
     const { mode } = this.state.mode;
     console.log(this.state);
-    return <App isLogged={this.state.isLogged} status={this.state.status} mode={this.state.mode} statusToggle={this._statusToggle} modeToggle={this._modeToggle} handleLogin={this._handleLogin} handleLogout={this._handleLogout} />;
+    return (
+      <App
+        isLogged={this.state.isLogged}
+        status={this.state.status}
+        mode={this.state.mode}
+        statusToggle={this._statusToggle}
+        modeToggle={this._modeToggle}
+        handleLogin={this._handleLogin}
+        handleLogout={this._handleLogout}
+      />
+    );
   }
 
   _statusToggle = event => {

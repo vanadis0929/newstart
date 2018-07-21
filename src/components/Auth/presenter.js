@@ -5,8 +5,7 @@ import styled from "styled-components";
 import LogoImage from "images/logo.png";
 
 import InputStyle from "styles/Input";
-import ButtonStyle from "styles/Button";
-import Anchor from "styles/Button";
+import ButtonStyle, { Anchor } from "styles/Button";
 
 //stateless
 const IntroWrap = styled.div`
@@ -112,12 +111,12 @@ const Auth = props => {
             <InputStyle type="password" placeholder="비밀번호" />
           </fieldset>
           <div>
-            <button type="button" onClick={props.handleLogin}>
-              로그인 gg
-            </button>
-            <button type="button" onClick={props.modeToggle}>
+            <ButtonStyle type="button" onClick={props.handleLogin}>
+              로그인
+            </ButtonStyle>
+            <ButtonStyle type="button" onClick={props.modeToggle}>
               회원가입하기
-            </button>
+            </ButtonStyle>
           </div>
         </LoginFormWrap>
       ) : (
@@ -130,9 +129,9 @@ const Auth = props => {
           </fieldset>
           <div>
             <ButtonStyle type="button">회원가입</ButtonStyle>
-            <button type="button" onClick={props.modeToggle}>
+            <ButtonStyle type="button" onClick={props.modeToggle}>
               취소
-            </button>
+            </ButtonStyle>
           </div>
         </JoinWrap>
       )}
