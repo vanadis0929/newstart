@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import styled from "styled-components";
 
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
@@ -24,22 +24,22 @@ const ContentsStyle = props => {
   return (
     <Contents>
       {props.status === "user" ? (
-        <React.Fragment>
+        <Fragment>
           <UserSearch />
           <UserList />
-        </React.Fragment>
+        </Fragment>
       ) : null}
       {props.status === "chat" ? (
-        <React.Fragment>
+        <Fragment>
           <ChatSearch />
           <ChatList />
-        </React.Fragment>
+        </Fragment>
       ) : null}
       {props.status === "mypage" ? (
-        <React.Fragment>
+        <Fragment>
           <MyPage />
           <MyMenuList />
-        </React.Fragment>
+        </Fragment>
       ) : null}
       {props.children}
     </Contents>

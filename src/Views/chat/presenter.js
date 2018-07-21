@@ -1,14 +1,14 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 import ChatSearch from "components/ChatSearch/";
 import ChatList from "components/ChatList/";
 
 const ChatListView = props => {
   return (
-    <React.Fragment>
+    <Fragment>
       <ChatSearch />
       <ChatList />
-    </React.Fragment>
+    </Fragment>
   );
 };
 

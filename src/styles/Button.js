@@ -39,5 +39,4 @@ const Button = props => {
 };
 
 export { Anchor };
-
 export default Button;

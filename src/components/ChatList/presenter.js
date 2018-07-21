@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import styled from "styled-components";
 
 import ChatRoom from "components/ChatRoom";
@@ -78,7 +78,7 @@ const ChatTime = styled.span`
 const ChatList = props => {
   console.log(props);
   return (
-    <React.Fragment>
+    <Fragment>
       <ChatListWrap>
         <li onClick={props.handleChatActive}>
           <ChatThum>
@@ -138,7 +138,7 @@ const ChatList = props => {
       {props.chatActive ? (
         <ChatRoom handleChatDeactive={props.handleChatDeactive} />
       ) : null}
-    </React.Fragment>
+    </Fragment>
   );
 };
 
