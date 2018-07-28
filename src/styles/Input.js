@@ -20,9 +20,11 @@ const Input = styled.input`
 // ${props => props.type === "email" ? `background: #012300;`};
 
 const InputStyle = props => {
+  const { type } = props;
+  const { placeholder } = props;
   console.log(props.type);
 
-  return <Input type={props.type} placeholder={props.placeholder} />;
+  return <Input type={type} placeholder={placeholder} />;
 };
 
 export default InputStyle;

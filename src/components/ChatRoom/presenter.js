@@ -115,13 +115,14 @@ const ChatInputBox = styled.div`
 `;
 
 const ChatRoom = props => {
+  const { handleChatDeactive } = props;
   console.log(props);
   return (
     <ChatRoomDiv>
       <ChatInfoArea>
-        <button type="button" onClick={props.handleChatDeactive}>
+        <button type="button" onClick={handleChatDeactive}>
           뒤로
-        </button>{" "}
+        </button>
         채팅방 이름
       </ChatInfoArea>
       <ChatMsgArea>

@@ -6,12 +6,9 @@ import PropTypes from "prop-types";
 class Container extends Component {
   render() {
     console.log(this.props);
-    return (
-      <CommonMenu
-        status={this.props.status}
-        statusToggle={this.props.statusToggle}
-      />
-    );
+    const { status } = this.props;
+    const { statusToggle } = this.props;
+    return <CommonMenu status={status} statusToggle={statusToggle} />;
   }
 }
 

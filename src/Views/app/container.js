@@ -9,15 +9,15 @@ class Container extends Component {
   };
 
   render() {
-    const { status } = this.state.status;
-    const { isLogged } = this.state.isLogged;
-    const { mode } = this.state.mode;
+    const { status } = this.state;
+    const { isLogged } = this.state;
+    const { mode } = this.state;
     console.log(this.state);
     return (
       <App
-        isLogged={this.state.isLogged}
-        status={this.state.status}
-        mode={this.state.mode}
+        isLogged={isLogged}
+        status={status}
+        mode={mode}
         statusToggle={this._statusToggle}
         modeToggle={this._modeToggle}
         handleLogin={this._handleLogin}

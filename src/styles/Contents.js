@@ -21,27 +21,29 @@ const Contents = styled.article`
 const ContentsStyle = props => {
   //const { children } = props; //와 동일
 
+  const { status } = props;
+  //const { children } = props;
+
   return (
     <Contents>
-      {props.status === "user" ? (
+      {status === "user" ? (
         <Fragment>
           <UserSearch />
           <UserList />
         </Fragment>
       ) : null}
-      {props.status === "chat" ? (
+      {status === "chat" ? (
         <Fragment>
           <ChatSearch />
           <ChatList />
         </Fragment>
       ) : null}
-      {props.status === "mypage" ? (
+      {status === "mypage" ? (
         <Fragment>
           <MyPage />
           <MyMenuList />
         </Fragment>
       ) : null}
-      {props.children}
     </Contents>
   );
 };

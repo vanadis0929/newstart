@@ -76,68 +76,70 @@ const ChatTime = styled.span`
 `;
 
 const ChatList = props => {
+  //props정의
+  const { handleChatActive } = props;
+  const { handleChatDeactive } = props;
+  const { chatActive } = props;
+
   console.log(props);
   return (
     <Fragment>
       <ChatListWrap>
-        <li onClick={props.handleChatActive}>
+        <li onClick={handleChatActive}>
           <ChatThum>
             <img src={require("../../images/profile.jpg")} alt="" />
-          </ChatThum>{" "}
+          </ChatThum>
           <dl>
             <ChatTitle>
-              <span> 채팅방 이름입니다 </span> <ChatMember> 50 </ChatMember>{" "}
-            </ChatTitle>{" "}
-            <ChatContext> 채팅내용이 여기에 </ChatContext>{" "}
-          </dl>{" "}
-          <ChatTime> 오후 10: 10 </ChatTime>{" "}
-        </li>{" "}
+              <span> 채팅방 이름입니다 </span> <ChatMember> 50 </ChatMember>
+            </ChatTitle>
+            <ChatContext> 채팅내용이 여기에 </ChatContext>
+          </dl>
+          <ChatTime> 오후 10: 10 </ChatTime>
+        </li>
         <li>
           <ChatThum>
             <img src={require("../../images/profile.jpg")} alt="" />
-          </ChatThum>{" "}
+          </ChatThum>
           <dl>
             <ChatTitle>
-              <span> 채팅방 이름입니다 </span> <ChatMember> 50 </ChatMember>{" "}
-            </ChatTitle>{" "}
-            <ChatContext> 채팅내용이 여기에 </ChatContext>{" "}
-          </dl>{" "}
-          <ChatTime> 오후 10: 10 </ChatTime>{" "}
-        </li>{" "}
+              <span> 채팅방 이름입니다 </span> <ChatMember> 50 </ChatMember>
+            </ChatTitle>
+            <ChatContext> 채팅내용이 여기에 </ChatContext>
+          </dl>
+          <ChatTime> 오후 10: 10 </ChatTime>
+        </li>
         <li>
           <ChatThum>
             <img src={require("../../images/profile.jpg")} alt="" />
-          </ChatThum>{" "}
+          </ChatThum>
           <dl>
             <ChatTitle>
-              <span> 채팅방 이름입니다 </span> <ChatMember> 50 </ChatMember>{" "}
-            </ChatTitle>{" "}
-            <ChatContext> 채팅내용이 여기에 </ChatContext>{" "}
-          </dl>{" "}
-          <ChatTime> 오후 10: 10 </ChatTime>{" "}
-        </li>{" "}
+              <span> 채팅방 이름입니다 </span> <ChatMember> 50 </ChatMember>
+            </ChatTitle>
+            <ChatContext> 채팅내용이 여기에 </ChatContext>
+          </dl>
+          <ChatTime> 오후 10: 10 </ChatTime>
+        </li>
         <li>
           <ChatThum>
             <img src={require("../../images/profile.jpg")} alt="" />
-          </ChatThum>{" "}
+          </ChatThum>
           <dl>
             <ChatTitle>
-              <span> 채팅방 이름입니다 </span> <ChatMember> 50 </ChatMember>{" "}
-            </ChatTitle>{" "}
+              <span> 채팅방 이름입니다 </span> <ChatMember> 50 </ChatMember>
+            </ChatTitle>
             <ChatContext>
-              {" "}
               채팅내용이 여기에 채팅내용이 여기에 채팅내용이 여기에 채팅내용이
               여기에 채팅내용이 여기에 채팅내용이 여기 채팅내용이 여기에
-              채팅내용이 여기에 채팅내용이 여기{" "}
-            </ChatContext>{" "}
-          </dl>{" "}
-          <ChatTime> 오후 10: 10 </ChatTime>{" "}
-        </li>{" "}
+              채팅내용이 여기에 채팅내용이 여기
+            </ChatContext>
+          </dl>
+          <ChatTime> 오후 10: 10 </ChatTime>
+        </li>
       </ChatListWrap>
 
-      {props.chatActive ? (
-        <ChatRoom handleChatDeactive={props.handleChatDeactive} />
-      ) : null}
+      {chatActive ? <ChatRoom handleChatDeactive={handleChatDeactive} /> : null}
     </Fragment>
   );
 };

@@ -11,13 +11,14 @@ const Layout = styled.div`
 const LayoutStyle = props => {
   //const { children } = props;
   //const children = props.children; 와 동일
+  const { status } = props;
   console.log(props);
   return (
     //로그인 후에 나오는 부분
 
     <Layout>
       <Header {...props} />
-      <Contents status={props.status} />
+      <Contents status={status} />
     </Layout>
   );
 };

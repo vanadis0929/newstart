@@ -99,22 +99,27 @@ const JoinWrap = styled.form`
 `;
 
 const Auth = props => {
+  //props 정의
+  const { mode } = props;
+  const { handleLogin } = props;
+  const { modeToggle } = props;
+
   return (
     <IntroWrap>
       <Logo>
         <img src={LogoImage} alt="" />
       </Logo>
-      {props.mode === "login" ? (
+      {mode === "login" ? (
         <LoginFormWrap>
           <fieldset>
             <InputStyle type="email" placeholder="이메일 아이디 입력" />
             <InputStyle type="password" placeholder="비밀번호" />
           </fieldset>
           <div>
-            <ButtonStyle type="button" onClick={props.handleLogin}>
+            <ButtonStyle type="button" onClick={handleLogin}>
               로그인
             </ButtonStyle>
-            <ButtonStyle type="button" onClick={props.modeToggle}>
+            <ButtonStyle type="button" onClick={modeToggle}>
               회원가입하기
             </ButtonStyle>
           </div>
@@ -129,7 +134,7 @@ const Auth = props => {
           </fieldset>
           <div>
             <ButtonStyle type="button">회원가입</ButtonStyle>
-            <ButtonStyle type="button" onClick={props.modeToggle}>
+            <ButtonStyle type="button" onClick={modeToggle}>
               취소
             </ButtonStyle>
           </div>

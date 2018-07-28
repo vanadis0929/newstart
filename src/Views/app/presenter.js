@@ -76,10 +76,12 @@ img {
 `;
 
 const App = props => {
-  console.log(this.props);
+  //사용되는 props정의
+  const { isLogged } = props;
+
   return (
     <Fragment>
-      {props.isLogged === false ? <Auth {...props} /> : <Layout {...props} />}
+      {isLogged === false ? <Auth {...props} /> : <Layout {...props} />}
     </Fragment>
   );
 };
